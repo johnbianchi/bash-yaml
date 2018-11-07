@@ -1,4 +1,7 @@
-os: linux
+os: 
+  - linux
+  - osx
+
 language: bash
 
 before_script:
@@ -6,3 +9,6 @@ before_script:
 
 script:
   - ./test/test.sh --debug
+
+notifications:
+  email: false

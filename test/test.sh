@@ -2,7 +2,10 @@
 
 # Configure
 set -e
+pwd
+echo "$(dirname "${BASH_SOURCE[0]}")"
 cd "$(dirname "$(readlink -f "$0")")"
+pwd
 source ../yaml.sh
 
 # Debug
