@@ -3,12 +3,10 @@
 # Based on https://gist.github.com/pkuczynski/8665367
 
 function parse_yaml() {
-    local yaml_file=$1
-    local prefix=$2
-    local s
-    local w
-    local fs
+    local yaml_file prefix s w fs 2>/dev/null  # ignore errors if 'local' is not valid
 
+    yaml_file=$1
+    prefix=$2
     s='[[:space:]]*'
     w='[a-zA-Z0-9_.-]*'
     fs="$(echo @|tr @ '\034')"
